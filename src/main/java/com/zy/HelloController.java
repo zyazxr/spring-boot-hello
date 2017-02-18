@@ -18,4 +18,16 @@ public class HelloController {
     public String hello(){
         return "hello";
     }
+
+    /**
+     * Spring Boot默认使用的json解析框架是jackson
+     * @return
+     */
+    @RequestMapping("/getDemo")
+    public Demo getDemo(){
+        Demo demo = new Demo();
+        demo.setId(1);
+        demo.setName("zhangsan");
+        return demo;
+    }
 }
