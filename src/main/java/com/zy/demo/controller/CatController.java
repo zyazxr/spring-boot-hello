@@ -21,7 +21,7 @@ public class CatController {
     public String save() {
         Cat cat = new Cat();
         cat.setCatAge(3);
-        cat.setCatName("jack");
+        cat.setCatName("jack1");
         catService.save(cat);
         return "save ok.";
     }
@@ -34,5 +34,15 @@ public class CatController {
     @RequestMapping("/getAll")
     public Iterable<Cat> getAll(){
         return catService.getAll();
+    }
+    @RequestMapping("/findByCatName")
+    public Cat findByCatName(String catName){
+        return catService.findByCatName(catName);
+    }
+    @RequestMapping("/findByCatName2")
+    public Cat findByCatName2(String catName){
+        System.out.println("CatController.findByCatName2()");
+        return catService.findByCatName2(catName);
+
     }
 }
