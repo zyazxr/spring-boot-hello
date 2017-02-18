@@ -1,6 +1,7 @@
 package com.zy.demo.service;
 
 import com.zy.demo.bean.Cat;
+import com.zy.demo.dao.CatDao;
 import com.zy.demo.repository.Cat2Repository;
 import com.zy.demo.repository.CatRepository;
 
@@ -19,8 +20,8 @@ public class CatService {
     @Resource
     private Cat2Repository cat2Repository;
 
-//    @Resource
-//    private CatDao catDao;
+    @Resource
+    private CatDao catDao;
     //保存数据.
     @Transactional
     public void save(Cat cat) {
@@ -47,7 +48,7 @@ public class CatService {
     }
 
 
-//    public Cat selectByCatName(String catName){
-//        return catDao.selectByCatName(catName);
-//    }
+    public Cat selectByCatName(String catName){
+        return catDao.selectByCatName(catName);
+    }
 }

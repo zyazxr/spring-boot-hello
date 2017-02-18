@@ -54,6 +54,12 @@
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
     </dependencies>
+    <!-- 引入了spring-data-jpa，不需要引入
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency>
+		 -->
 <!--构建节点-->
     <build>
         <plugins>

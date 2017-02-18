@@ -25,24 +25,31 @@ public class CatController {
         catService.save(cat);
         return "save ok.";
     }
+
     @RequestMapping("/delete")
-    public String delete(){
+    public String delete() {
         catService.delete(1);
         return "delete ok";
     }
 
     @RequestMapping("/getAll")
-    public Iterable<Cat> getAll(){
+    public Iterable<Cat> getAll() {
         return catService.getAll();
     }
+
     @RequestMapping("/findByCatName")
-    public Cat findByCatName(String catName){
+    public Cat findByCatName(String catName) {
         return catService.findByCatName(catName);
     }
+
     @RequestMapping("/findByCatName2")
-    public Cat findByCatName2(String catName){
+    public Cat findByCatName2(String catName) {
         System.out.println("CatController.findByCatName2()");
         return catService.findByCatName2(catName);
+    }
 
+    @RequestMapping("/selectByCatName")
+    public Cat selectByCatName(String catName) {
+        return catService.selectByCatName(catName);
     }
 }
