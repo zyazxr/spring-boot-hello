@@ -28,7 +28,7 @@ public class HelloController {
     @RequestMapping("/getDemo")
     public Demo getDemo(){
         Demo demo = new Demo();
-        demo.setId(1);
+        demo.setId(22);
         demo.setName("zhangsan");
         demo.setCreateTime(new Date());
         demo.setRemarks("这是备注信息");
