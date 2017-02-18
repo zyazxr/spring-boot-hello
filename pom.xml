@@ -38,18 +38,23 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.17</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+            <scope>true</scope>
+        </dependency>
     </dependencies>
 <!--构建节点-->
     <build>
         <plugins>
             <!--添加SpirngBoot Loaded-->
-            <plugin>
+ <!--           <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <dependencies>
-                    <!--Springloade hot deploy-->
-                    <!-- https://mvnrepository.com/artifact/org.springframework/springloaded -->
+                    &lt;!&ndash;Springloade hot deploy&ndash;&gt;
+                    &lt;!&ndash; https://mvnrepository.com/artifact/org.springframework/springloaded &ndash;&gt;
                     <dependency>
                         <groupId>org.springframework</groupId>
                         <artifactId>springloaded</artifactId>
@@ -66,6 +71,16 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>-->
+
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <!--fork 如果没有该配置，devtool不会起作用，即不会restart-->
+                    <fork>true</fork>
+                </configuration>
+
             </plugin>
         </plugins>
     </build>

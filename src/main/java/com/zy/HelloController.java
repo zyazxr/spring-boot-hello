@@ -18,9 +18,12 @@ public class HelloController {
      */
     @RequestMapping("/hello")
     public String hello(){
+        return "hello 2017 3";
+    }
+    @RequestMapping("/hello2")
+    public String hello2(){
         return "hello 2017 2";
     }
-
     /**
      * Spring Boot默认使用的json解析框架是jackson
      * @return

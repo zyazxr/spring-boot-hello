@@ -20,7 +20,7 @@ import java.util.List;
 @SpringBootApplication
 //public class App extends WebMvcConfigurerAdapter {
 public class App {
-
+//-javaagent:.\lib\springloaded-1.2.4.RELEASE.jar -noverify
     public static void main(String[] args) {
         SpringApplication.run(App.class, args);
     }
