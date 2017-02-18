@@ -18,7 +18,7 @@ public class HelloController {
      */
     @RequestMapping("/hello")
     public String hello(){
-        return "hello";
+        return "hello 2017";
     }
 
     /**
@@ -31,6 +31,7 @@ public class HelloController {
         demo.setId(1);
         demo.setName("zhangsan");
         demo.setCreateTime(new Date());
+        demo.setRemarks("这是备注信息");
         return demo;
     }
 }

@@ -11,6 +11,17 @@ import java.util.Date;
 public class Demo {
     private int id;
 
+    @JSONField(serialize = false)
+    private String remarks;
+
+    public String getRemarks() {
+        return remarks;
+    }
+
+    public void setRemarks(String remarks) {
+        this.remarks = remarks;
+    }
+
     @JSONField(format = "yyyy-mm-dd HH:MM:SS")
     public Date getCreateTime() {
         return createTime;
