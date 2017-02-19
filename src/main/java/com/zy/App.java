@@ -4,12 +4,15 @@ import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.config.FastJsonConfig;
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.web.HttpMessageConverters;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.junit.Test;
 
 import java.util.List;
 
@@ -20,10 +23,14 @@ import java.util.List;
 @SpringBootApplication
 //public class App extends WebMvcConfigurerAdapter {
 public class App {
-//-javaagent:.\lib\springloaded-1.2.4.RELEASE.jar -noverify
+
+
+    //-javaagent:.\lib\springloaded-1.2.4.RELEASE.jar -noverify
     public static void main(String[] args) {
+
         SpringApplication.run(App.class, args);
     }
+
 
 /*    @Override
     public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {

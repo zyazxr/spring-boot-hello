@@ -1,5 +1,7 @@
 package com.zy;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,6 +13,7 @@ import java.util.Date;
  */
 @RestController
 public class HelloController {
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
     /**
      * 这里我们使用@RequestMapping ,建立请求映射
      * http:localhost:8080/hello
@@ -18,6 +21,9 @@ public class HelloController {
      */
     @RequestMapping("/hello")
     public String hello(){
+        logger.debug("日志输出测试 Debug");
+        logger.trace("日志输出测试 Trace");
+        logger.info("日志输出测试 Info");
         return "hello 2017";
     }
     @RequestMapping("/hello2")
